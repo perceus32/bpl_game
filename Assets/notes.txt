@@ -1,0 +1,11 @@
+
+build - thumbnail, name, starting screens-unity, bpl    *l
+home scene - title, tap, exit, info*l
+backend - leaderboard, google login     *al
+sounds  *ar
+optimize   *ar
+scene transition
+game scene - player movt; object spawn; bg-parallax; logic; coin; score, highscore
+design    *ar
+restart scene - restart ;exit; text; score; high score; leaderboard
+pause scene - play, restart, exit   *l
