@@ -7,6 +7,7 @@ TagManager:
   - Dead
   - Coin
   - Score
+  - building
   layers:
   - Default
   - TransparentFX

@@ -73,7 +73,7 @@ public class spawner : MonoBehaviour
    
     void SpawnCoins(Transform parent)
     {
-        float random_x = Random.Range((float)0.5, 1);
+        float random_x = Random.Range((float)0.5, 0.8);
         float random_y = Random.Range(2, 3);
         var spawnPosition = parent.transform.position;
         coin1 = Instantiate(coinPrefab, new Vector3(spawnPosition.x, spawnPosition.y + random_y, spawnPosition.z), Quaternion.identity);

@@ -65,8 +65,9 @@ public class player : MonoBehaviour
     void FixedUpdate()
     {
         if (isGameOver) return;
-        if (!isGameOver&&scene.name==game)                                                //score update and display
+        if ((!isGameOver)/*&&scene.name==game*/)                                                //score update and display
         {
+            Debug.Log("w");
             gameScore++;
             score.text = "Score - " + gameScore.ToString();
 
@@ -96,6 +97,10 @@ public class player : MonoBehaviour
             Debug.Log("Coin!");
             Destroy(collision.gameObject);
             gameScore += 64;
+        }
+        if (collision.gameObject.CompareTag("building"))
+        {
+            Debug.Log("collided");  
         }
     }
     public void GameOver()

@@ -16,6 +16,7 @@ public class sceneShifter : MonoBehaviour
         
         gameScore = player.gameScore;
         score.text = "Score : " + gameScore.ToString();
+        player.gameScore = 0;
     }
 
     // Update is called once per frame
