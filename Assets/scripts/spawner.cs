@@ -78,10 +78,10 @@ public class spawner : MonoBehaviour
         var spawnPosition = parent.transform.position;
         coin1 = Instantiate(coinPrefab, new Vector3(spawnPosition.x, spawnPosition.y + random_y, spawnPosition.z), Quaternion.identity);
         coin2 = Instantiate(coinPrefab, new Vector3(spawnPosition.x + 1, spawnPosition.y + random_y, spawnPosition.z), Quaternion.identity);
-        coin3 = Instantiate(coinPrefab, new Vector3(spawnPosition.x + 2, spawnPosition.y + random_y, spawnPosition.z), Quaternion.identity);
+        //coin3 = Instantiate(coinPrefab, new Vector3(spawnPosition.x + 2, spawnPosition.y + random_y, spawnPosition.z), Quaternion.identity);
         coin1.transform.parent = parent;
         coin2.transform.parent = parent;
-        coin3.transform.parent = parent;
+        //coin3.transform.parent = parent;
 
     }
 }

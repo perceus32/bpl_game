@@ -50,8 +50,9 @@
      <Compile Include="Assets\scripts\spawner.cs" />
      <Compile Include="Assets\scripts\player.cs" />
      <Compile Include="Assets\scripts\sceneShift.cs" />
-     <Compile Include="Assets\scripts\parallax.cs" />
      <Compile Include="Assets\scripts\restart.cs" />
+     <Compile Include="Assets\scripts\parallax.cs" />
+     <Compile Include="Assets\scripts\sceneShifter.cs" />
  <Reference Include="UnityEngine">
  <HintPath>D:/unity/2020.3.18f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.dll</HintPath>
  </Reference>

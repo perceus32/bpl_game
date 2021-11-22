@@ -22,6 +22,7 @@ public class sceneShift : MonoBehaviour
     }
     public void ExitGame()
     {
+        Debug.Log("exit");
         Application.Quit();
     }
 }

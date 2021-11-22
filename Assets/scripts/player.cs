@@ -8,7 +8,7 @@ public class player : MonoBehaviour
 {
     public Animator anim;            //animation
     public Text score, highScore;    //ui
-    public int gameScore = 0;        //ui reference
+    public static int gameScore = 0;        //ui reference
     public float upForce;            //jumpForce
     public Rigidbody2D rb;           //player rb
     public bool isGameOver = false;  //game end logic
@@ -16,14 +16,19 @@ public class player : MonoBehaviour
     public float timer = 0f;
     public float timerVar;
     public bool canJump = true;
+    public string game;
+    Scene scene;
+    
 
 
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log(gameScore);
         highScore.text = "HighScore : " + PlayerPrefs.GetInt("HighScore", 0).ToString();    //initialize highscore to 0
         rb.AddForce(Vector2.up * upForce * Time.deltaTime);                //initial jump
         anim = GetComponent<Animator>();
+        Scene scene = SceneManager.GetActiveScene();
     }
 
     void Update()
@@ -60,7 +65,7 @@ public class player : MonoBehaviour
     void FixedUpdate()
     {
         if (isGameOver) return;
-        if (!isGameOver)                                                //score update and display
+        if (!isGameOver&&scene.name==game)                                                //score update and display
         {
             gameScore++;
             score.text = "Score - " + gameScore.ToString();
@@ -90,6 +95,7 @@ public class player : MonoBehaviour
         {
             Debug.Log("Coin!");
             Destroy(collision.gameObject);
+            gameScore += 64;
         }
     }
     public void GameOver()
